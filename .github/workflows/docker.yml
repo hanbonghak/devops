@@ -1,8 +1,14 @@
 name: Publish Docker image
 
 on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
   pull_request:
     types: [assigned, opened, synchronize, reopened]
+
 
 jobs:
   push_to_registry:
